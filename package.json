@@ -1,0 +1,33 @@
+{
+  "name": "gulp-nuget-pack",
+  "version": "0.0.5",
+  "description": "Gulp task for creating nuget packages without using nuget.exe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w8r/gulp-nuget-pack.git"
+  },
+  "keywords": [
+    "gulp",
+    "nuget",
+    "package",
+    "zip"
+  ],
+  "author": "Alexander Milevski <info@w8r.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w8r/gulp-nuget-pack/issues"
+  },
+  "homepage": "https://github.com/w8r/gulp-nuget-pack#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "grunt-nuget-pack": "0.0.5",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "queue-async": "^1.0.7",
+    "through2": "^0.6.5"
+  }
+}
