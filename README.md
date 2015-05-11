@@ -1,4 +1,4 @@
-gulp-nuget-pack
+gulp-nuget-pack [![npm version](https://badge.fury.io/js/gulp-nuget-pack.svg)](http://badge.fury.io/js/gulp-nuget-pack)
 ==================
 
 [Gulp](http://gulpjs.com) task for creating nuget packages without using the nuget.exe. This makes it easier to build nuget packages on non windows environment or continuous integration services like Travis CI. It's created to produce packages for JavaScript projects not .NET libraries.
