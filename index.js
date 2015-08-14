@@ -68,12 +68,12 @@ module.exports = function(options, files, taskCallback) {
 
             try {
               pack.addFile(src, dest);
-              queueCallback(null, filePair.src || filePair);
             } catch (ex) {
               throw ex;
               queueCallback(ex);
             }
           });
+          queueCallback(null, filePair.src || filePair);
           streamCallback();
         }));
     });
