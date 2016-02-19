@@ -24,7 +24,7 @@
   "homepage": "https://github.com/w8r/gulp-nuget-pack#readme",
   "devDependencies": {},
   "dependencies": {
-    "grunt-nuget-pack": "0.0.5",
+    "grunt-nuget-pack": "0.0.6",
     "gulp": "^3.8.11",
     "gulp-util": "^3.0.4",
     "queue-async": "^1.0.7",
