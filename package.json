@@ -1,6 +1,6 @@
 {
   "name": "gulp-nuget-pack",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Gulp task for creating nuget packages without using nuget.exe.",
   "main": "index.js",
   "scripts": {
