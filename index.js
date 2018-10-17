@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var gulp = require('gulp');
 var queue = require('queue-async');
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
 var through = require('through2');
 var Package = require('grunt-nuget-pack/lib/Package');
 
@@ -90,7 +90,7 @@ module.exports = function(options, files, taskCallback) {
       pack.saveAs(packageFilePath, taskCallback);
       gutil.log(gutil.colors.green("Created nupkg file:"), gutil.colors.white(packageFilePath));
     } catch (ex) {
-      throw new gutil.PluginError({
+      throw new PluginError({
         plugin: 'nugetpack',
         message: ex.message
       });
