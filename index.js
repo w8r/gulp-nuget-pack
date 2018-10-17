@@ -4,8 +4,10 @@ var fs = require('fs');
 var path = require('path');
 var gulp = require('gulp');
 var queue = require('queue-async');
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
 var through = require('through2');
+var log = require('fancy-log');
+var colors = require('ansi-colors');
 var Package = require('grunt-nuget-pack/lib/Package');
 
 var NUGETPACK_EXT = "nupkg";
@@ -14,7 +16,7 @@ module.exports = function(options, files, taskCallback) {
   var baseDir, pack;
 
   if (typeof options != "object") {
-    throw new gutil.PluginError({
+    throw new PluginError({
       plugin: 'nugetpack',
       message: "Required meta information not specified."
     });
@@ -47,7 +49,7 @@ module.exports = function(options, files, taskCallback) {
             if (!dest) {
               if (path.resolve(src)
                 .indexOf(path.resolve(baseDir)) !== 0) {
-                throw new gutil.PluginError({
+                throw new PluginError({
                   plugin: 'nugetpack',
                   message: "Path for file: " + src +
                     " isn't within the baseDir: " +
@@ -88,9 +90,9 @@ module.exports = function(options, files, taskCallback) {
 
     try {
       pack.saveAs(packageFilePath, taskCallback);
-      gutil.log(gutil.colors.green("Created nupkg file:"), gutil.colors.white(packageFilePath));
+      log(colors.green("Created nupkg file:"), colors.white(packageFilePath));
     } catch (ex) {
-      throw new gutil.PluginError({
+      throw new PluginError({
         plugin: 'nugetpack',
         message: ex.message
       });

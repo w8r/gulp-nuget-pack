@@ -22,11 +22,14 @@
     "url": "https://github.com/w8r/gulp-nuget-pack/issues"
   },
   "homepage": "https://github.com/w8r/gulp-nuget-pack#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "ansi-colors": "^3.1.0",
+    "fancy-log": "^1.3.2"
+  },
   "dependencies": {
     "grunt-nuget-pack": "0.0.6",
-    "gulp": "^3.8.11",
-    "gulp-util": "^3.0.4",
+    "gulp": "^4.0.0",
+    "plugin-error": "^1.0.1",
     "queue-async": "^1.0.7",
     "through2": "^0.6.5"
   }
