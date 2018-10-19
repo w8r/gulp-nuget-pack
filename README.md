@@ -138,7 +138,7 @@ A path that should be treated as the base dir for the contents of the package. T
 
 Simple example showing the essential options this will add the files specified to the "content" directory if the nupkg.
 
-```
+```js
 var gulp = require('gulp');
 var nugetpack = require('gulp-nuget-pack');
 ...
@@ -164,7 +164,7 @@ gulp.task('nuget-pack', function(callback) {
 
 More advanced example showing all the options notice that you need to specify "/content" as the base path in the package for script resources.
 
-```
+```js
 var gulp = require('gulp');
 var nugetpack = require('gulp-nuget-pack');
 ...
