@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var nugetpack = require('./index');
 
-gulp.task('package', function(callback) {
+gulp.task('test', function(callback) {
   var pkg = require('./package.json');
 
   nugetpack({
@@ -35,5 +35,3 @@ gulp.task('package', function(callback) {
 
     callback);
 });
-
-gulp.task('test', ['package'])
